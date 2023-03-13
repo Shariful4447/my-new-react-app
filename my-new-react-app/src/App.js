@@ -9,8 +9,8 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <h1>{2+4}</h1>
-        <p>New App startet Happy Learning 2+5 </p>
+        <h1>The Sum of Two Numbers : {2+4}</h1>
+        <p>New App startet Happy Learning </p>
         <a
           className="App-link"
           href="https://reactjs.org"
