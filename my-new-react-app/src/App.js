@@ -2,6 +2,12 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  var person = {name:"Akkas",
+          job: "Singer" };
+  var person2 = {
+    name: "kakoli",
+    job:"kokil konthi"
+  } ;       
   return (
     <div className="App">
       <header className="App-header">
@@ -9,8 +15,9 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <h1>The Sum of Two Numbers : {2+4}</h1>
+        <h1>The Sum of Two Numbers : {2+4} & Name Is : {person.name + ' ' + person.job}</h1>
         <p>New App startet Happy Learning </p>
+        <h3>Singer : {person2.name +' '+ person2.job}</h3>
         <a
           className="App-link"
           href="https://reactjs.org"
