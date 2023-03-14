@@ -7,7 +7,11 @@ function App() {
   var person2 = {
     name: "kakoli",
     job:"kokil konthi"
-  } ;       
+  } ;  
+  var style={
+    color: 'red',
+    backgroundColor:'green'
+  };     
   return (
     <div className="App">
       <header className="App-header">
@@ -15,7 +19,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <h1>The Sum of Two Numbers : {2+4} & Name Is : {person.name + ' ' + person.job}</h1>
+        <h1 class='' style={style}>The Sum of Two Numbers : {2+4} & Name Is : {person.name + ' ' + person.job}</h1>
         <p>New App startet Happy Learning </p>
         <h3>Singer : {person2.name +' '+ person2.job}</h3>
         <a
