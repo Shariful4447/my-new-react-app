@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  const nayoks=['Anawar','Rubel','Salman Muqtadir']
   var person = {name:"Akkas",
           job: "Singer" };
   var person2 = {
@@ -31,38 +33,38 @@ function App() {
           Learn React
         </a>
         <h1>new Name</h1>
-        <Person></Person>
-        <Person2></Person2>
-        <Person></Person>
+        <Person name={nayoks[0]} Nayika="Moushumi"></Person>
+        <Person name="Jasim Nayok" Nayika="Moyori"></Person>
+        <Person name="Umar sani" Nayika="Dilruba khan"></Person>
         
       </header>
     </div>
   );
 }
 
-function Person(){
+function Person(props){
   // const personStyle={
   //   border:'2px solid red',
   //   margin:'10px'
   // }
   return(
   <div style={{border:'2px solid yellow',margin:'10px'}}>
-  <h1>Name : sakib khan </h1>
-  <h3>Hero of the year</h3>
+  <h1>Nayok : {props.name} </h1>
+  <h3>Hero of :{props.Nayika} </h3>
   </div>)
   
 }
-function Person2(){
-  const personStyle={
-    border:'2px solid red',
-    margin:'10px'
-  }
-  return(
-  <div style={personStyle}>
-  <h1>Name : sakib khan </h1>
-  <h3>Hero of the year</h3>
-  </div>)
+// function Person2(){
+//   const personStyle={
+//     border:'2px solid red',
+//     margin:'10px'
+//   }
+//   return(
+//   <div style={personStyle}>
+//   <h1>Name : sakib khan </h1>
+//   <h3>Hero of the year</h3>
+//   </div>)
   
-}
+// }
 
 export default App;
