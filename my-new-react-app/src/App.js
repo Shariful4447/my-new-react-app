@@ -4,16 +4,22 @@ import './App.css';
 function App() {
 
   const nayoks=['Anawar','Rubel','Salman Muqtadir']
-  var person = {name:"Akkas",
-          job: "Singer" };
-  var person2 = {
-    name: "kakoli",
-    job:"kokil konthi"
-  } ;  
-  var style={
-    color: 'red',
-    backgroundColor:'green'
-  };     
+  const products = [
+    {name: 'Photoshop', price:'$90.99'},
+    {name:'Illustrator', price:'60.99'},
+    {name:'PDF Reader',price:'$6.99'}
+
+]
+  // var person = {name:"Akkas",
+  //         job: "Singer" };
+  // var person2 = {
+  //   name: "kakoli",
+  //   job:"kokil konthi"
+  // } ;  
+  // var style={
+  //   color: 'red',
+  //   backgroundColor:'green'
+  // };     
   return (
     <div className="App">
       <header className="App-header">
@@ -41,6 +47,8 @@ function App() {
          <p>I am React person</p>
          <Person name="Munna Bhai" job="Football khele"></Person>
          <Person name="Masum" job="Khela dekhe"></Person>
+         <Product name={products[0].name} price={products[0].price}></Product>
+         <Product ></Product>
       </header>
     </div>
   );
@@ -79,6 +87,25 @@ function Person(props){
     <p>My Profession: {props.job} </p>
 
   </div>)
+}
+
+function Product(props){
+  const productStyle={
+    border: '1px solid grey',
+    borderRadius:'5px',
+    backgroundColor:'lightgray',
+    height:'200px',
+    width:'200px'
+  }
+  return(
+  <div style={productStyle}>
+    <h3>Name : {props.name}</h3>
+    <h1>Price</h1>
+    <button>Buy Now</button>
+
+
+  </div>
+  )
 }
 
 export default App;
