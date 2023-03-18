@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 //import logo from './logo.svg';
 import './App.css';
 
@@ -46,6 +46,7 @@ function App() {
         <Person name="Umar sani" Nayika="Dilruba khan"></Person>
          */}
          <Counter></Counter>
+         <User></User>
 
           <Product product={products[0]}></Product>
           <Product product={products[1]}></Product>
@@ -119,6 +120,25 @@ function Counter(){
   )
 
 
+}
+function User(){
+  const [users, setUsers]=useState([]);
+  useEffect(()=>{
+    console.log('Calling effect');
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then (res =>res.json())
+    .then(data=>setUsers(data));
+  }, [])
+  return(
+    <div>
+      <h3>Dynamic user : {users.length}</h3>
+      <ul>
+        {
+          users.map(user =><li>{user.name}</li>)
+        }
+      </ul>
+    </div>
+  )
 }
 
 function Product(props){
