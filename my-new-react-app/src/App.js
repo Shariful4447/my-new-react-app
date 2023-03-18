@@ -1,15 +1,15 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 
 function App() {
 
-  const nayoks=['Anawar','Rubel','Salman Muqtadir']
+  //const nayoks=['Anawar','Rubel','Salman Muqtadir']
   const products = [
     {name: 'Photoshop', price:'$90.99'},
     {name:'Illustrator', price:'60.99'},
     {name:'PDF Reader',price:'$6.99'}
 
-]
+  ]
   // var person = {name:"Akkas",
   //         job: "Singer" };
   // var person2 = {
@@ -44,11 +44,13 @@ function App() {
         <Person name="Umar sani" Nayika="Dilruba khan"></Person>
          */}
 
+          <Product product={products[0]}></Product>
+          <Product product={products[1]}></Product>
+         
          <p>I am React person</p>
-         <Person name="Munna Bhai" job="Football khele"></Person>
-         <Person name="Masum" job="Khela dekhe"></Person>
-         <Product name={products[0].name} price={products[0].price}></Product>
-         <Product ></Product>
+         {/* <Person name="Munna Bhai" job="Football khele"></Person>
+         <Person name="Masum" job="Khela dekhe"></Person> */}
+         
       </header>
     </div>
   );
@@ -80,31 +82,32 @@ function App() {
 // // }
 
 
-function Person(props){
-  return(
-  <div style={{border:'2px solid yellow',width:'400px'}}>
-    <h3>My Name : {props.name}</h3>
-    <p>My Profession: {props.job} </p>
+// function Person(props){
+//   return(
+//   <div style={{border:'2px solid yellow',width:'400px'}}>
+//     <h3>My Name : {props.name}</h3>
+//     <p>My Profession: {props.job} </p>
 
-  </div>)
-}
+//   </div>)
+// }
 
 function Product(props){
   const productStyle={
     border: '1px solid grey',
     borderRadius:'5px',
     backgroundColor:'lightgray',
+    color:'green',
     height:'200px',
-    width:'200px'
+    width:'200px',
+    float:'left'
   }
+  const {name,price} = props.product;
   return(
-  <div style={productStyle}>
-    <h3>Name : {props.name}</h3>
-    <h1>Price</h1>
-    <button>Buy Now</button>
-
-
-  </div>
+    <div style={productStyle}>
+      <h3>{name}</h3>
+      <h5>{price}</h5>
+      <button>Buy Now</button>
+    </div>
   )
 }
 
