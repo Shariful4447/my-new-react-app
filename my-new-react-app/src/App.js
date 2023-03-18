@@ -3,11 +3,12 @@ import './App.css';
 
 function App() {
 
-  //const nayoks=['Anawar','Rubel','Salman Muqtadir']
+  const nayoks=['Anawar', 'Rubel', 'Salman', 'Jasim', 'Razzak', 'Shuvo', 'Tareq']
   const products = [
     {name: 'Photoshop', price:'$90.99'},
-    {name:'Illustrator', price:'60.99'},
-    {name:'PDF Reader',price:'$6.99'}
+    {name:'Illustrator', price:'$60.99'},
+    {name:'PDF Reader',price:'$6.99'},
+    {name: 'Premiere El', price:'$7.99'}
 
   ]
   // var person = {name:"Akkas",
@@ -47,7 +48,17 @@ function App() {
           <Product product={products[0]}></Product>
           <Product product={products[1]}></Product>
          
-         <p>I am React person</p>
+         
+         <ul>
+          {
+            nayoks.map(nayok => <li>{nayok}</li>)
+          }
+          {
+            products.map(product => <li>{product.name}</li>)
+          }
+
+         </ul>
+         {products.map(pd=><Product product={pd}></Product>)}
          {/* <Person name="Munna Bhai" job="Football khele"></Person>
          <Person name="Masum" job="Khela dekhe"></Person> */}
          
